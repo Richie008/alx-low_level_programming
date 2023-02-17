@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * My first c comment.
+ *main - entry
+ *return: always 0 (success)
  */
 
 int main(void)
