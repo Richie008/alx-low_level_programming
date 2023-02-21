@@ -1,15 +1,21 @@
-#include <unistd.h>
-#include <sys/syscall.h>
+#include "main.h"
 
 /**
-*main - a progrram that prints _putchar
-*return: 0 (success)
-*/
+ * main - Prints _putchar
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
+	int count, sz;
 
-int main(void) 
-{ 
-    const char msg[] = "_putchar\n"; 
-    syscall(SYS_write, 1, msg, sizeof(msg)); 
-    return 0; 
+	sz = sizeof(str) / sizeof(int);
+	for (count = 0; count < sz; count++)
+	{
+		_putchar(str[count]);
+	}
+	_putchar('\n');
+	return (0);
 }
 
